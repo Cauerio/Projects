@@ -78,7 +78,7 @@ def show_users(request):
     
 # Hacer un contador de usuarios eliminados de la base de datos.
 # Contar las ids inexistentes con el limite de la ultima id creada.
-    
+"""    
 @csrf_exempt
 def count_id_del(request): 
     
@@ -87,6 +87,8 @@ def count_id_del(request):
     d = serializers.serialize('json', Datos.objects.filter(id_usuario__isnull=False).distinct())
     d.count('id_usuario')
     return JsonResponse({'count':d})
+    
+    """
 
 
 
